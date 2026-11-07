@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:overlay_support/overlay_support.dart';
 
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-
 Future<void> main() async{
 	WidgetsFlutterBinding.ensureInitialized();
-
-	await dotenv.load();
 
 	runApp(
 		OverlaySupport.global(
@@ -44,18 +40,6 @@ class Home extends StatefulWidget {
 }
 
 class View extends State<Home> {
-
-	final String programmer = dotenv.get('PROGRAMMER');
-
-	@override
-	void initState() {
-		super.initState();
-
-		WidgetsBinding.instance.addPostFrameCallback((_) =>
-			toast(programmer)
-		);
-	}
-
 	@override
 	Widget build(BuildContext context) {
 		return Scaffold(
@@ -68,5 +52,4 @@ class View extends State<Home> {
 			)
 		);
 	}
-
 }
