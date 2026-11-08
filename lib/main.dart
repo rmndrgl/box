@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:overlay_support/overlay_support.dart';
+import 'package:box/login.dart';
 
 Future<void> main() async{
 	WidgetsFlutterBinding.ensureInitialized();
 
-	runApp(
-		OverlaySupport.global(
-			child: const Box()
-		)
-	);
+	runApp(const Box());
 }
 
 class Box extends StatelessWidget {
@@ -21,35 +17,18 @@ class Box extends StatelessWidget {
 	Widget build(BuildContext context) {
 		return MaterialApp(
 			title: 'Box app test',
-				theme: ThemeData(
-				colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+			theme: ThemeData(
+				appBarTheme: const AppBarTheme(
+					backgroundColor: Color(0xFFD73220),
+				),
+				scaffoldBackgroundColor: Color(0XFF384657),
+				colorScheme: .fromSeed(
+					seedColor: Color(0xFF206FD6)
+				),
+				useMaterial3: true,
 			),
-			home: const Home(),
-		);
-	}
-
-}
-
-class Home extends StatefulWidget {
-	const Home({
-		super.key,
-	});
-
-	@override
-	State<Home> createState() => View();
-}
-
-class View extends State<Home> {
-	@override
-	Widget build(BuildContext context) {
-		return Scaffold(
-			appBar: AppBar(
-				backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-				title: Text('Box app test'),
-			),
-			body: Center(
-				child: const Text('Box app test'),
-			)
+			home: const Login(),
+			debugShowCheckedModeBanner: false,
 		);
 	}
 }

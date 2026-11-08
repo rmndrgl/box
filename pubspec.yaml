@@ -14,7 +14,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.8
-  overlay_support: ^2.1.0
+  local_auth: ^3.0.2
 
 dev_dependencies:
   flutter_test:
