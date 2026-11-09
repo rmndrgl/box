@@ -14,7 +14,8 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.8
-  local_auth: ^3.0.2
+  flutter_dotenv: ^6.0.1
+  mysql_dart: ^4.0.1
 
 dev_dependencies:
   flutter_test:
@@ -27,3 +28,4 @@ flutter:
   uses-material-design: true
 
   assets:
+    - .env

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:box/login.dart';
+import 'package:box/views/home.dart';
 
-Future<void> main() async{
+Future<void> main() async {
 	WidgetsFlutterBinding.ensureInitialized();
 
 	runApp(const Box());
@@ -27,7 +27,7 @@ class Box extends StatelessWidget {
 				),
 				useMaterial3: true,
 			),
-			home: const Login(),
+			home: Home(),
 			debugShowCheckedModeBanner: false,
 		);
 	}
