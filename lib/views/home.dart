@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:box/core/database/mariadb.dart';
-
 class Home extends StatefulWidget {
 	const Home({
 		super.key,
@@ -12,15 +10,6 @@ class Home extends StatefulWidget {
 }
 
 class HomeView extends State<Home> {
-
-	MariaDB maria = MariaDB();
-
-	@override
-	void initState() {
-		super.initState();
-		maria.connection();
-	}
-
 	@override
 	Widget build(BuildContext context) {
 		return Scaffold(
@@ -33,5 +22,4 @@ class HomeView extends State<Home> {
 			)
 		);
 	}
-
 }

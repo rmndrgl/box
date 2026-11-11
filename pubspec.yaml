@@ -1,6 +1,6 @@
 name: box
 
-description: "box"
+description: 'box'
 
 publish_to: 'none'
 
@@ -15,7 +15,6 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   flutter_dotenv: ^6.0.1
-  mysql_dart: ^4.0.1
 
 dev_dependencies:
   flutter_test:
