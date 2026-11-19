@@ -1,11 +1,17 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
+
+import 'package:overlay_support/overlay_support.dart';
 
 import 'package:box/views/home.dart';
 
 Future<void> main() async {
 	WidgetsFlutterBinding.ensureInitialized();
 
-	runApp(const Box());
+	runApp(
+		OverlaySupport.global(
+			child: const Box()
+		)
+	);
 }
 
 class Box extends StatelessWidget {
@@ -18,12 +24,8 @@ class Box extends StatelessWidget {
 		return MaterialApp(
 			title: 'Box app test',
 			theme: ThemeData(
-				appBarTheme: const AppBarTheme(
-					backgroundColor: Color(0xFFD73220),
-				),
-				scaffoldBackgroundColor: Color(0XFF384657),
-				colorScheme: .fromSeed(
-					seedColor: Color(0xFF206FD6)
+				appBarTheme: AppBarTheme(
+					backgroundColor: Color(0xFF18B89A),
 				),
 				useMaterial3: true,
 			),
