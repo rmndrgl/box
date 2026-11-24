@@ -1,6 +1,6 @@
 import 'package:material_ui/material_ui.dart';
 
-import 'package:box/controllers/theme_controller.dart';
+import 'package:box/themes/theme_controller.dart';
 
 class Home extends StatefulWidget {
 	const Home({
